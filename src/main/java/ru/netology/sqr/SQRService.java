@@ -5,15 +5,16 @@ public class SQRService {
         int amount = 0; //  счетчик
 
         for (int i = 10; i <= 99; i++) {
-            if (i * i >= x) {
-                if (i * i <= y) {
+            if (x > 99 * 99 || y < 10 * 10) {
+                break;                    // прерываю цикл, чтобы исключить бесполезные итерации
+            } else {
+                if (i * i >= x && i * i <= y) {
                     amount++;
-                } else {
-                    break;
                 }
             }
         }
         return amount;
-
     }
 }
+
+
