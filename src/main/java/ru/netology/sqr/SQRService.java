@@ -1,14 +1,14 @@
 package ru.netology.sqr;
 
 public class SQRService {
-    public int calcAmountSqr(int x, int y) {
+    public int calcAmountSqr(int min, int max) {
         int amount = 0; //  счетчик
 
         for (int i = 10; i <= 99; i++) {
-            if (x > 99 * 99 || y < 10 * 10) {
+            if (min > 99 * 99 || max < 10 * 10) {
                 break;                    // прерываю цикл, чтобы исключить бесполезные итерации
             } else {
-                if (i * i >= x && i * i <= y) {
+                if (i * i >= min && i * i <= max) {
                     amount++;
                 }
             }
